@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A gift for you</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="bg-slideshow" aria-hidden="true">
+      <div class="bg-slide is-active" id="bg-a"></div>
+      <div class="bg-slide" id="bg-b"></div>
+      <div class="bg-overlay"></div>
+    </div>
+    <canvas id="glitter" aria-hidden="true"></canvas>
+
+    <section id="gift-scene" class="scene scene--gift" aria-label="Open the gift">
+      <p class="eyebrow">Algo especial para ustedes UwU</p>
+      <h1 class="script-title">Un regalito</h1>
+      <p class="hint">Toca el regalo para abrirlo</p>
+
+      <button class="gift-btn" id="gift-btn" type="button" aria-label="Open the gift">
+        <div class="gift" id="gift">
+          <div class="gift__shadow"></div>
+          <div class="gift__lid">
+            <span class="bow bow--left"></span>
+            <span class="bow bow--right"></span>
+            <span class="bow-knot"></span>
+            <span class="ribbon ribbon--lid"></span>
+          </div>
+          <div class="gift__box">
+            <span class="ribbon ribbon--vert"></span>
+            <span class="spark spark--1"></span>
+            <span class="spark spark--2"></span>
+            <span class="spark spark--3"></span>
+          </div>
+        </div>
+      </button>
+    </section>
+
+    <section id="party-scene" class="scene scene--party" hidden aria-label="Celebration">
+      <header class="hero">
+        <p class="eyebrow">De mi corazón</p>
+        <h1 class="script-title" id="greeting-title">Momentos felices, para ustedes</h1>
+        <div class="music-bar">
+          <button id="music-toggle" class="music-btn" type="button" aria-pressed="true">
+            <span class="eq" aria-hidden="true">
+              <i></i><i></i><i></i><i></i>
+            </span>
+            <span id="music-label">Play music</span>
+          </button>
+          <p class="music-note">Birthday songs from the songs folder, looping for you</p>
+        </div>
+      </header>
+
+      <section class="block" aria-labelledby="photos-heading">
+        <h2 id="photos-heading">Photos</h2>
+        <div class="gallery">
+          <figure>
+            <img src="assets/01.jpg" alt="A lush bouquet of peonies, roses, and wildflowers" />
+            <figcaption>Blooming for you</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/02.jpg" alt="A celebration cake with berries, gold frosting, and candles" />
+            <figcaption>Sweet celebration</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/03.jpg" alt="Shiny pink, gold, and turquoise balloons with glitter" />
+            <figcaption>Lifted by joy</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/04.jpg" alt="Golden hour picnic with sparkling wine and string lights" />
+            <figcaption>Golden hours</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/05.jpg" alt="Night sky filled with glitter sparks and fairy lights" />
+            <figcaption>Starlit wishes</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/06.jpg" alt="Handwritten notes, flowers, gold ribbon, and candlelight" />
+            <figcaption>Words from the heart</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="messages-heading">
+        <h2 id="messages-heading">Mensajes</h2>
+        <div class="cards cards--messages" id="messages"></div>
+      </section>
+
+      <footer class="finale">
+        <p class="script-title finale__script">Gracias por ser increíbles</p>
+        <p>May every day feel this bright.</p>
+      </footer>
+    </section>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
